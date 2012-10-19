@@ -1,6 +1,6 @@
 # jetty-h2
 
-Life cycle H2 database control to Jetty server.
+H2 database Lifecycle control for Jetty web server 
 
 This Jetty "plugin" was made for H2 database up (opening tcp port to connections) and down with Jetty server. It also starts the H2 webconsole if you want.
 
