@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
+<Configure class="org.eclipse.jetty.server.Server" id="Server">
+
+    <Call name="addBean">
+      <Arg>
+        <New class="com.arezi.jetty.h2.H2LifeCycle">
+          <Set name="baseDir">C:\Temp</Set>
+          <Set name="ifExists">false</Set>
+          <Set name="tcpPort">9092</Set>
+          <Set name="web">true</Set>
+          <Set name="webPort">8084</Set>
+        </New>
+      </Arg>
+    </Call>
+
+</Configure>
