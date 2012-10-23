@@ -65,15 +65,15 @@ public class H2LifeCycle extends AbstractLifeCycle {
 			}
 		}
 		
-		log.info(STARTING, "Starting H2 database.");
+		log.info("Starting H2 database.");
 
 		h2 = new Server();
 		
-		h2.setOut(new PrintStream(new LogJettyOutputStream(log, RUNNING, Level.INFO)));
+		h2.setOut(new PrintStream(new LogJettyOutputStream(log, Level.INFO)));
         
 		h2.runTool(lstArgs.toArray(new String[lstArgs.size()]));
 
-		log.info(STARTED, "H2 database started.");
+		log.info("H2 database started.");
 
 	}
 	

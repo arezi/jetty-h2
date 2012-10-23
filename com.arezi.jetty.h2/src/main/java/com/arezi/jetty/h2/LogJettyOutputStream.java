@@ -16,18 +16,16 @@ class LogJettyOutputStream extends OutputStream {
     
 	private Logger log;
 
-	private String tag;
-
 	private Level level;
 	
-	public LogJettyOutputStream(Logger log, String tag, Level level) {
+	public LogJettyOutputStream(Logger log, Level level) {
 		this.log = log;
-		this.tag = tag;
 		this.level = level;
 	}
 	
 	
 	public void write(int b) throws IOException {
+		
 		if( (char)b == '\n' ) {
 			String msg = bao.toString();
 			msg = msg.substring(0, msg.length() -1);
@@ -36,17 +34,20 @@ class LogJettyOutputStream extends OutputStream {
 		} else {
 			bao.write(b);
 		}
+
 	}
 
 
 	private void printLog(String msg) {
+
 		if (level == Level.DEBUG) {
-			log.debug(tag, msg);
+			log.debug(msg);
 		} else if (level == Level.INFO) {
-			log.info(tag, msg);
+			log.info(msg);
 		} else if (level == Level.WARN) {
-			log.warn(tag, msg);
+			log.warn(msg);
 		}
+		
 	}
 	
 }
