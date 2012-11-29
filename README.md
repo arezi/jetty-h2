@@ -6,8 +6,8 @@ This Jetty "plugin" was made for H2 database up (opening tcp port to connections
 
 # Usage
 
-Put the jetty-h2-x.x.x.jar and h2-&lt;version&gt;.jar in jetty-&lt;version&gt;/lib
+Put the jetty-h2-&lt;version&gt;.jar and h2-&lt;version&gt;.jar in jetty-&lt;version&gt;/lib/h2 directory.
 
 Put the jetty-h2.xml in jetty-&lt;version&gt;/etc directory and edit it if you wish.
 
-Include the jetty-h2.xml in your start.ini or in your command line startup. 
+Include the jetty-h2.xml in your start.ini or in your command line startup, and add h2 in OPTIONS.
